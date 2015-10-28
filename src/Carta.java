@@ -1,3 +1,4 @@
+
 /**
  * @author Daniela Colamai y Fernanda Gonzalez
  *
@@ -7,31 +8,23 @@ import java.util.Vector;
 
 public class Carta {
 	private String nombre;
-    private Vector<Atributo> atributos = new Vector<>();
-    private int condicion;
-
-    public Carta(String nombre, Vector<Atributo> atributos, int condicion) {
-        this.nombre=nombre;
-        this.atributos = atributos;
-        this.condicion = condicion;
-    }
+	private Vector<Atributo> atributos = new Vector<Atributo>();
+	private Pocima pocima;
     
+    /**
+     * Constructor
+     * @param nombre
+     * @param atributos
+     * @param pocima
+     */
     public Carta(String nombre, Vector<Atributo> atributos) {
         this.nombre=nombre;
         this.atributos = atributos;
+        this.pocima = null;
     }
-    
-    /*public Carta(String[] valores) {
-        nombre=valores[0];
-        atributos=new Vector<>();
-        for(int i=1;i<valores.length-3;i=i+3){
-            Atributo a=new Atributo(valores[i],new Integer(valores[i+1]),new Integer(valores[i+2]));
-            atributos.add(a);
-        }
-    }*/
 
 	/**
-	 * @return the nombre
+	 * @return el nombre de la carta
 	 */
 	public String getNombre() {
 		return nombre;
@@ -45,7 +38,7 @@ public class Carta {
 	}
 
 	/**
-	 * @return the atributos
+	 * @return el vector atributos
 	 */
 	public Vector<Atributo> getAtributos() {
 		return atributos;
@@ -59,24 +52,46 @@ public class Carta {
 	}
 	
 	/**
-	 * @return the condicion
+	 * @return una pocima pocima
 	 */
-	public int getCondicion() {
-		return condicion;
+	public Pocima getPocima() {
+		return pocima;
 	}
 
 	/**
-	 * @param condicion the condicion to set
+	 * @param pocima the pocima to set
 	 */
-	public void setCondicion(int condicion) {
-		this.condicion = condicion;
+	public void setPocima(Pocima pocima) {
+		this.pocima = pocima;
 	}
-	
+
 	/**
 	 * @return la cantidad de atributos de una carta
 	 */
     public int getCantAtrib(){
     	return this.atributos.size();
     }
+    
+    /**
+	 * @return el atributo que coincide con el nombre pasado por parametro
+	 */
+    public Atributo obtenerUnAtributo(String n){
+    	int i = 0;
+		while (!this.atributos.get(i).getNombre().equals(n) && i<this.atributos.size()){
+			i++;
+		}
+		return this.atributos.get(i);
+    }
+
 	
+   @Override
+    public String toString() {
+        String toReturn="'"+this.nombre+"'";
+        for(Atributo a: this.atributos){
+            toReturn=toReturn+" ["+a.getNombre()+ ":"+a.getValor()+ ":"+a.getCondicion()+"]";
+        }
+        toReturn=toReturn+" ["+this.pocima.getNombre()+ ":" +this.pocima.getValor()+"]";
+        return toReturn;
+    }
+    
 }

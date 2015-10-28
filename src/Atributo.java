@@ -3,11 +3,18 @@
  * @author Daniela Colamai y Fernanda Gonzalez
  *
  */
-public class Atributo {
+
+public abstract class Atributo {
 	private String nombre;
 	private int valor;
 	private int condicion;
 	
+	/**
+	 * Constructor Atributo
+	 * @param nombre
+	 * @param valor
+	 * @param condicion
+	 */
 	public Atributo(String nombre, int valor, int condicion){
 		this.nombre = nombre;
 		this.valor = valor;
@@ -15,7 +22,7 @@ public class Atributo {
 	}
 
 	/**
-	 * @return the nombre
+	 * @return el nombre del atributo
 	 */
 	public String getNombre() {
 		return nombre;
@@ -29,7 +36,7 @@ public class Atributo {
 	}
 
 	/**
-	 * @return the valor
+	 * @return el valor del atributo
 	 */
 	public int getValor() {
 		return valor;
@@ -43,7 +50,7 @@ public class Atributo {
 	}
 
 	/**
-	 * @return the condicion
+	 * @return la condicion del atributo
 	 */
 	public int getCondicion() {
 		return condicion;
@@ -55,5 +62,12 @@ public class Atributo {
 	public void setCondicion(int condicion) {
 		this.condicion = condicion;
 	}
+	
+	/**
+	 * compara con el atributo y retorna el que gano
+	 * @param a
+	 * @return un atributo
+	 */
+	protected abstract int comparar(Atributo a);
 
 }
