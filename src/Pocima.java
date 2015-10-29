@@ -30,6 +30,6 @@ public abstract class Pocima {
 		return valor;
 	}
 	
-	protected double calcular(Atributo a, double v);	
+	protected abstract double calcular(Atributo a,double v);
 	
 }
