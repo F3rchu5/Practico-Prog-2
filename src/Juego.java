@@ -46,6 +46,41 @@ public class Juego {
 	 }
 	
 	/**
+	 * Reparte las cartas del mazo Gral entre los jugadores.
+	 * @param mazoGral
+	 * @param aRepartir
+	 * @param j1
+	 * @param j2
+	 */
+	public void repartirCartasConPosimas(Mazo mazoGral, Vector<Pocima> aRepartir, Jugador j1, Jugador j2){
+		
+		Mazo mazoJ1=j1.getMazoJugador();
+		Mazo mazoJ2=j2.getMazoJugador();
+        int i=0;             
+		
+		while (mazoGral.cantCartas()!=0){
+			mazoJ1.agregarCarta(mazoGral.cartaActual());
+			mazoGral.borrarCartaActual();
+			if (!aRepartir.isEmpty()){
+				mazoJ1.cartaActual().agregarPocima(aRepartir.get(i));
+				aRepartir.remove(i);
+				mazoJ1.cartaActual().actualizarAtributos();
+			}
+			if (mazoGral.cantCartas()>0) {
+				mazoJ2.agregarCarta(mazoGral.cartaActual());
+				mazoGral.borrarCartaActual();
+				if (!aRepartir.isEmpty()){
+					i++;
+					mazoJ2.cartaActual().agregarPocima(aRepartir.get(i));
+					aRepartir.remove(i);
+					mazoJ2.cartaActual().actualizarAtributos();
+				}
+			}
+			i++;
+		}  
+	 }
+	
+	/**
 	 * Hace la comparación del atributo elegido aleatoriamente.
 	 * @param mj1
 	 * @param mj2

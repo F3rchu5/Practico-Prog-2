@@ -11,4 +11,13 @@ public class ValorFijo extends Pocima{
 		return v;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "ValorFijo [getNombre()=" + getNombre() + ", getValor()="
+				+ getValor() + "]";
+	}
+
 }

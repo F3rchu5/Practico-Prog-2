@@ -4,6 +4,7 @@
  *
  */
 
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -44,8 +45,9 @@ public class Main {
 		pocimasARepartir.add(pLimitada3);
 		Pocima pLimitada4 = new PocimaLimitada("Pócima Limitada",20,10); //4
 		pocimasARepartir.add(pLimitada4);
-		Pocima cocktail1 = new PocimaCockail()
+		//Pocima cocktail1 = new PocimaCockail()
 		
+		Collections.shuffle(pocimasARepartir);
 		
 		String ruta = "../TPE/cartas.txt";
 		System.out.println("JUEGO DE CARTAS: ENFRENTAMIENTO DE SUPERHEROES!!!");
@@ -62,7 +64,20 @@ public class Main {
 		Mazo mazoLeido=new Mazo(ruta);
         
         Juego juegoNuevo = new Juego(mazoLeido);
-        juegoNuevo.repartirCartas(mazoLeido, j1, j2);
+        System.out.println("Desea jugar con pócimas? (si o no)");
+		String respuesta = sc.nextLine();
+		/**while ((respuesta != "si") || (respuesta != "no")){
+			boolean r=((respuesta != "si") || (respuesta != "no"));
+			System.out.println(r);
+			System.out.println("El valor ingresado NO es correcto. Por favor ingrese si o no: ");
+			respuesta = sc.nextLine();
+		}**/
+		if (respuesta == "no"){
+			juegoNuevo.repartirCartas(mazoLeido, j1, j2);
+		}
+		else{
+			juegoNuevo.repartirCartasConPosimas(mazoLeido, pocimasARepartir, j1, j2);
+		}
         juegoNuevo.Jugar(mazoLeido, j1, j2);
         
         sc.close();

@@ -82,16 +82,28 @@ public class Carta {
 		}
 		return this.atributos.get(i);
     }
-
-	
-   @Override
-    public String toString() {
-        String toReturn="'"+this.nombre+"'";
-        for(Atributo a: this.atributos){
-            toReturn=toReturn+" ["+a.getNombre()+ ":"+a.getValor()+ ":"+a.getCondicion()+"]";
-        }
-        toReturn=toReturn+" ["+this.pocima.getNombre()+ ":" +this.pocima.getValor()+"]";
-        return toReturn;
+    
+    /**
+	 * @param atributos
+	 * @param pocima 
+	 */
+    public void actualizarAtributos(){
+    	for (int i=0; i<this.getCantAtrib(); i++){
+    		double valor = this.atributos.get(i).getValor();
+    		Atributo atributo = this.atributos.get(i);
+    		this.atributos.get(i).setValor(this.pocima.calcular(atributo, valor));
+    	}
     }
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Carta [nombre=" + nombre + ", atributos=" + atributos
+				+ ", pocima=" + pocima + "]";
+	}
+	
+   
     
 }

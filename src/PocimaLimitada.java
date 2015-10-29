@@ -19,6 +19,16 @@ public class PocimaLimitada extends Decrementa{
 				operacion=a.getValor();
 			}
 		}
-	return v + operacion;
+	return operacion;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "PocimaLimitada [uso=" + uso + ", v2=" + v2 + ", getNombre()="
+				+ getNombre() + ", getValor()=" + getValor() + "]";
+	}
+	
 }

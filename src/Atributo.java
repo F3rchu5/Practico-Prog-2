@@ -6,7 +6,7 @@
 
 public abstract class Atributo {
 	private String nombre;
-	private int valor;
+	private double valor;
 	private int condicion;
 	
 	/**
@@ -38,14 +38,14 @@ public abstract class Atributo {
 	/**
 	 * @return el valor del atributo
 	 */
-	public int getValor() {
+	public double getValor() {
 		return valor;
 	}
 
 	/**
 	 * @param valor the valor to set
 	 */
-	public void setValor(int valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 
