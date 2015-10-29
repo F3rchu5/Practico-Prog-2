@@ -59,9 +59,9 @@ public class Carta {
 	}
 
 	/**
-	 * @param pocima the pocima to set
+	 * @param pocima 
 	 */
-	public void setPocima(Pocima pocima) {
+	public void agregarPocima(Pocima pocima) {
 		this.pocima = pocima;
 	}
 

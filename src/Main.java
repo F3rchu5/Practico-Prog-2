@@ -44,6 +44,7 @@ public class Main {
 		pocimasARepartir.add(pLimitada3);
 		Pocima pLimitada4 = new PocimaLimitada("Pócima Limitada",20,10); //4
 		pocimasARepartir.add(pLimitada4);
+		Pocima cocktail1 = new PocimaCockail()
 		
 		
 		String ruta = "../TPE/cartas.txt";

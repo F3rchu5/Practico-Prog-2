@@ -10,14 +10,31 @@ public class PocimaCocktail extends Pocima{
 
 	protected double calcular(Atributo a,double v){
 		for (int i=0;i<pocimas.size();i++){
-			v=v+pocimas.get(i).calcular(a,this.v);
+			String nombre = pocimas.get(i).getNombre();
+			if (nombre == "Valor Fijo"){
+				v = pocimas.get(i).calcular(a, v);
+			}
+			else{
+				if ((nombre == "Selectiva Fuerza") && (a.getNombre() == "fuerza")){
+					v += pocimas.get(i).calcular(a, v);
+				}
+				else{
+					if ((nombre == "Selectiva Peso") && (a.getNombre() == "peso")){
+						v += pocimas.get(i).calcular(a, v);
+					}
+					else{
+						if(((nombre == "Selectiva Fuerza") && (a.getNombre() != "fuerza")) || ((nombre == "Selectiva Peso") && (a.getNombre() != "peso"))){
+							v += 0;
+						}
+						else{
+							v += pocimas.get(i).calcular(a, v);
+						}
+					}
+				}
+			}
 		}
 		return v; 
 
 	} 
 	
-	
-	
-	
-
 }
