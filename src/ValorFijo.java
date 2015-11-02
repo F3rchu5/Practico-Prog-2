@@ -1,14 +1,19 @@
 
-public class ValorFijo extends Pocima{
-	final static int VALORFIJO =5;
 
+
+public class ValorFijo extends Pocima{
+
+	/**
+	 * @param nombre
+	 * @param valor
+	 */
 	public ValorFijo(String nombre, int valor) {
-		super(nombre, valor);
+		this.nombre = nombre;
+		this.valor = valor;
 	}
 	
 	protected double calcular(Atributo a,double v){
-		v = VALORFIJO;
-		return v;
+		return getValor();
 	}
 
 	/* (non-Javadoc)

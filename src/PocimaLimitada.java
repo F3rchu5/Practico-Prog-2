@@ -2,11 +2,16 @@
 public class PocimaLimitada extends Decrementa{
 	private int uso=0;
 	private int v2;
+	
+	/**
+	 * @param nombre
+	 * @param valor
+	 */
 	public PocimaLimitada(String nombre, int valor, int v2) {
 		super(nombre, valor);
-		this.v2=v2;
+		this.v2 = v2;
 	}
-	
+
 	protected double calcular(Atributo a,double v){
 		double operacion=0;
 		if (this.uso==1){

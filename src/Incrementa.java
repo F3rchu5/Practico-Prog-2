@@ -1,9 +1,13 @@
 
 public class Incrementa extends Pocima{
 
+	/**
+	 * @param nombre
+	 * @param valor
+	 */
 	public Incrementa(String nombre, int valor) {
-		super(nombre, valor);
-	
+		this.nombre = nombre;
+		this.valor = valor;
 	}
 	
 	protected double calcular(Atributo a,double v){

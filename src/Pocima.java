@@ -4,18 +4,9 @@
  *
  */
 public abstract class Pocima {
-	private String nombre;
-	private int valor;
+	protected String nombre;
+	protected int valor;
 	
-	/**
-	 * @param nombre
-	 * @param valor
-	 */
-	public Pocima(String nombre, int valor) {
-		this.nombre = nombre;
-		this.valor = valor;
-	}
-
 	/**
 	 * @return the nombre
 	 */
