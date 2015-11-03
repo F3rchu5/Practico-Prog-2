@@ -14,60 +14,60 @@ public class Main {
 		
 		Vector<Pocima> pocimasARepartir = new Vector<Pocima>();
 		
-		Pocima fortalecedora = new Incrementa("Fortalecedora",20);       //1
+		Pocima fortalecedora = new PocimaModificadora("Fortalecedora",20);       //1
 		pocimasARepartir.add(fortalecedora); 
-		Pocima fortPlus = new Incrementa("Fortalecedora Plus",50);       //2
+		Pocima fortPlus = new PocimaModificadora("Fortalecedora Plus",50);       //2
 		pocimasARepartir.add(fortPlus);
-		Pocima selecFuerza = new Incrementa("Selectiva Fuerza",35);      //3
-		pocimasARepartir.add(selecFuerza);
-		Pocima selecPeso = new Incrementa("Selectiva Peso",43);          //4
-		pocimasARepartir.add(selecPeso);
-		Pocima kripto = new Decrementa("Kriptonita",25);                 //1
+		Pocima kripto = new PocimaModificadora("Kriptonita",-25);                //3
 		pocimasARepartir.add(kripto);
-		Pocima reduPlomo = new Decrementa("Reductor de Plomo",55);       //2
+		Pocima reduPlomo = new PocimaModificadora("Reductor de Plomo",-55);      //4
 		pocimasARepartir.add(reduPlomo);
-		Pocima kriptoAzul = new Decrementa("Kriptonita Azul",95);        //3
-		pocimasARepartir.add(kriptoAzul);
-		Pocima kriptoFalsa = new Decrementa("Kriptonita Falsa",5);       //4
-		pocimasARepartir.add(kriptoFalsa);
-		Pocima vFijo1 = new ValorFijo("Valor Fijo",5);                   //1
+		Pocima selecFuerza = new PocimaSelectivaAtributo("Fuerza",-35);          //1
+		pocimasARepartir.add(selecFuerza);
+		Pocima selecPeso = new PocimaSelectivaAtributo("Peso",-43);              //2
+		pocimasARepartir.add(selecPeso);
+		Pocima selecFuerza2 = new PocimaSelectivaAtributo("Fuerza",-35);         //3
+		pocimasARepartir.add(selecFuerza2);
+		Pocima selecPeso2 = new PocimaSelectivaAtributo("Peso",-43);             //4
+		pocimasARepartir.add(selecPeso2);
+		Pocima vFijo1 = new ValorFijo("Valor Fijo",5);                           //1
 		pocimasARepartir.add(vFijo1);
-		Pocima vFijo2 = new ValorFijo("Valor Fijo",5);                   //2
+		Pocima vFijo2 = new ValorFijo("Valor Fijo",5);                           //2
 		pocimasARepartir.add(vFijo2);
-		Pocima vFijo3 = new ValorFijo("Valor Fijo",5);                   //3
+		Pocima vFijo3 = new ValorFijo("Valor Fijo",5);                           //3
 		pocimasARepartir.add(vFijo3);
-		Pocima vFijo4 = new ValorFijo("Valor Fijo",5);                   //4
+		Pocima vFijo4 = new ValorFijo("Valor Fijo",5);                           //4
 		pocimasARepartir.add(vFijo4);
-		Pocima pLimitada1 = new PocimaLimitada("Pócima Limitada",20,10); //1
+		Pocima pLimitada1 = new PocimaLimitada("Pócima Limitada");               //1
 		pocimasARepartir.add(pLimitada1);
-		Pocima pLimitada2 = new PocimaLimitada("Pócima Limitada",20,10); //2
+		Pocima pLimitada2 = new PocimaLimitada("Pócima Limitada");               //2
 		pocimasARepartir.add(pLimitada2);
-		Pocima pLimitada3 = new PocimaLimitada("Pócima Limitada",20,10); //3
+		Pocima pLimitada3 = new PocimaLimitada("Pócima Limitada");               //3
 		pocimasARepartir.add(pLimitada3);
-		Pocima pLimitada4 = new PocimaLimitada("Pócima Limitada",20,10); //4
+		Pocima pLimitada4 = new PocimaLimitada("Pócima Limitada");               //4
 		pocimasARepartir.add(pLimitada4);
 		Vector<Pocima> vPoc1 = new Vector<Pocima>();
 		vPoc1.add(pLimitada1);
 		vPoc1.add(selecPeso);
 		vPoc1.add(vFijo4);
-		Pocima cocktail1 = new PocimaCocktail(vPoc1); 					 //1
+		Pocima cocktail1 = new PocimaCocktail(vPoc1); 					         //1
 		pocimasARepartir.add(cocktail1);
 		Vector<Pocima> vPoc2 = new Vector<Pocima>();
 		vPoc2.add(pLimitada1);
-		Pocima cocktail2 = new PocimaCocktail(vPoc2);                    //2
+		Pocima cocktail2 = new PocimaCocktail(vPoc2);                            //2
 		pocimasARepartir.add(cocktail2);
 		Vector<Pocima> vPoc3 = new Vector<Pocima>();
 		vPoc3.add(cocktail1);
 		vPoc3.add(cocktail2);
-		Pocima cocktail3 = new PocimaCocktail(vPoc3);                    //3
+		Pocima cocktail3 = new PocimaCocktail(vPoc3);                            //3
 		pocimasARepartir.add(cocktail3);
 		Vector<Pocima> vPoc4 = new Vector<Pocima>();
 		vPoc4.add(fortalecedora);
 		vPoc4.add(cocktail1);
 		vPoc4.add(selecFuerza);
-		vPoc4.add(kriptoFalsa);
+		vPoc4.add(kripto);
 		vPoc4.add(pLimitada3);
-		Pocima cocktail4 = new PocimaCocktail(vPoc4); 					 //4
+		Pocima cocktail4 = new PocimaCocktail(vPoc4); 					        //4
 		pocimasARepartir.add(cocktail4);
 		
 		

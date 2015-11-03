@@ -1,4 +1,9 @@
 
+/**
+ * @author Daniela Colamai y Fernanda Gonzalez
+ *
+ */
+
 public class PocimaSelectivaAtributo extends PocimaModificadora{
 
 	public PocimaSelectivaAtributo(String nombre, int valor) {

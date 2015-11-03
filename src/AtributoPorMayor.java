@@ -16,16 +16,26 @@ public class AtributoPorMayor extends Atributo{
 		super(n,d,c);
 	}
 	
+	/**
+	 * @param un atributo
+	 * @return si el atributo es mayor, menor o igual
+	 */
 	public int comparar(Atributo a) {
 		if (a.getValor()>this.getValor()) 
 			return 1;
 		else 
 			if (a.getValor()<this.getValor())
 				return -1;
-		
 		return 0;
 	}
-
+	
+	/**
+	 * @return una copia del atributo
+	 */
+	public Atributo getCopia(){
+	    return new AtributoPorMayor(this.getNombre(),this.getValor(), this.getCondicion());
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -34,12 +44,6 @@ public class AtributoPorMayor extends Atributo{
 		return "Atributo Por Mayor --> Nombre=" + getNombre()
 				+ ", Valor=" + getValor() + ", Condicion="
 				+ getCondicion();
-	}
-	
-	
-	public Atributo getCopia(){
-	
-	    return new AtributoPorMayor(this.getNombre(),this.getValor(), this.getCondicion());
 	}
 	
 }

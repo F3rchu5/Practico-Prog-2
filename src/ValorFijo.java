@@ -1,5 +1,8 @@
 
-
+/**
+ * @author Daniela Colamai y Fernanda Gonzalez
+ *
+ */
 
 public class ValorFijo extends Pocima{
 

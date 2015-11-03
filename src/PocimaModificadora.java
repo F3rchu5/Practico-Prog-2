@@ -1,4 +1,9 @@
 
+/**
+ * @author Daniela Colamai y Fernanda Gonzalez
+ *
+ */
+
 public class PocimaModificadora extends Pocima{
 
 	/**

@@ -1,4 +1,9 @@
 
+/**
+ * @author Daniela Colamai y Fernanda Gonzalez
+ *
+ */
+
 public class PocimaLimitada extends Pocima{
 	private int cantVeces=0;
 	private double primera=20;
