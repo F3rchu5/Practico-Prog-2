@@ -10,17 +10,17 @@ public abstract class Pocima {
 	/**
 	 * @return the nombre
 	 */
-	public String getNombre() {
+	public String getNombrePocima() {
 		return nombre;
 	}
 
 	/**
 	 * @return the valor
 	 */
-	public int getValor() {
+	public int getPorcentaje() {
 		return valor;
 	}
 	
-	protected abstract double calcular(Atributo a,double v);
+	protected abstract double calcular(Atributo a);
 	
 }

@@ -1,29 +1,31 @@
 
-public class PocimaLimitada extends Decrementa{
-	private int uso=0;
-	private int v2;
+public class PocimaLimitada extends PocimaModificadora{
+	private int cantVeces=0;
+	private double primera=20;
+	private double segunda=10;
+	
 	
 	/**
 	 * @param nombre
 	 * @param valor
 	 */
-	public PocimaLimitada(String nombre, int valor, int v2) {
+	public PocimaLimitada(String nombre, int valor) {
 		super(nombre, valor);
-		this.v2 = v2;
 	}
 
-	protected double calcular(Atributo a,double v){
+	protected double calcular(Atributo a){
 		double operacion=0;
-		if (this.uso==1){
-			operacion = a.getValor()+( a.getValor()* this.getValor()/100);
+		if (cantVeces==1){
+			operacion = a.getValor()+( a.getValor()*primera/100);
 		}else{
-			if (this.uso==2){
-				operacion = a.getValor()+( a.getValor()*v2/100);
+			if (this.cantVeces==2){
+				operacion = a.getValor()+( a.getValor()*segunda/100);
 			}
 			else{
 				operacion=a.getValor();
 			}
 		}
+		cantVeces++;
 	return operacion;
 	}
 
@@ -32,8 +34,8 @@ public class PocimaLimitada extends Decrementa{
 	 */
 	@Override
 	public String toString() {
-		return "PocimaLimitada [uso=" + uso + ", v2=" + v2 + ", getNombre()="
-				+ getNombre() + ", getValor()=" + getValor() + "]";
+		return "PocimaLimitada [cantVeces=" + cantVeces + ", primera=" + primera + ", segunda=" + segunda + ", getNombre()="
+				+ getNombrePocima() + ", getPorcentaje()=" + getPorcentaje() + "]";
 	}
 	
 }

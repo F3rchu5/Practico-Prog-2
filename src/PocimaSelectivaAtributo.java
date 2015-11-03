@@ -1,13 +1,16 @@
 
-public class PocimaSelectivaAtributo extends Incrementa{
+public class PocimaSelectivaAtributo extends PocimaModificadora{
 
 	public PocimaSelectivaAtributo(String nombre, int valor) {
 		super(nombre, valor);
 	}
 	
-	protected double calcular(Atributo a,double v){
-		double operacion;
-		operacion = a.getValor()+( a.getValor()* this.getValor()/100);
+	protected double calcular(Atributo a){
+		double operacion=0;
+		if (a.getNombre().equals(getNombrePocima())){
+		operacion = a.getValor()+( a.getValor()* this.getPorcentaje()/100);
+		
+		}
 		return operacion;
 	}
 
@@ -16,8 +19,8 @@ public class PocimaSelectivaAtributo extends Incrementa{
 	 */
 	@Override
 	public String toString() {
-		return "PocimaSelectivaAtributo [getNombre()=" + getNombre()
-				+ ", getValor()=" + getValor() + "]";
+		return "PocimaSelectivaAtributo [getNombrePocima()=" + getNombrePocima()
+				+ ", getPorcentaje()=" + getPorcentaje() + "]";
 	}
 
 }
