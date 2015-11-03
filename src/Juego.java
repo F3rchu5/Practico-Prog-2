@@ -46,7 +46,7 @@ public class Juego {
 	 }
 	
 	/**
-	 * Reparte las cartas del mazo Gral entre los jugadores.
+	 * Reparte las cartas del mazo Gral y las pociones entre los jugadores.
 	 * @param mazoGral
 	 * @param aRepartir
 	 * @param j1
@@ -56,29 +56,26 @@ public class Juego {
 		
 		Mazo mazoJ1=j1.getMazoJugador();
 		Mazo mazoJ2=j2.getMazoJugador();
-        int i=0;             
 		
 		while (mazoGral.cantCartas()!=0){
-			mazoJ1.agregarCarta(mazoGral.cartaActual());
+			Carta c1=mazoGral.cartaActual();
 			mazoGral.borrarCartaActual();
 			if (!aRepartir.isEmpty()){
-				mazoJ1.cartaActual().agregarPocima(aRepartir.get(i));
-				aRepartir.remove(i);
-				mazoJ1.cartaActual().actualizarAtributos();
+				c1.agregarPocima(aRepartir.elementAt(0));
+				aRepartir.removeElementAt(0);
+			}
+			mazoJ1.agregarCarta(c1);
 			}
 			if (mazoGral.cantCartas()>0) {
-				mazoJ2.agregarCarta(mazoGral.cartaActual());
+				Carta c2 = mazoGral.cartaActual();
 				mazoGral.borrarCartaActual();
 				if (!aRepartir.isEmpty()){
-					i++;
-					mazoJ2.cartaActual().agregarPocima(aRepartir.get(i));
-					aRepartir.remove(i);
-					mazoJ2.cartaActual().actualizarAtributos();
+					c2.agregarPocima(aRepartir.elementAt(0));
+					aRepartir.removeElementAt(0);
 				}
+				mazoJ2.agregarCarta(c2);
 			}
-			i++;
 		}  
-	 }
 	
 	/**
 	 * Hace la comparación del atributo elegido aleatoriamente.

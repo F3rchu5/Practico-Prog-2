@@ -9,11 +9,11 @@ public class AtributoPorMayor extends Atributo{
 	/**
 	 * Constructor AtributoPorMayor
 	 * @param n
-	 * @param v
+	 * @param d
 	 * @param c
 	 */
-	public AtributoPorMayor(String n, int v, int c){		
-		super(n,v,c);
+	public AtributoPorMayor(String n, double d, int c){		
+		super(n,d,c);
 	}
 	
 	public int comparar(Atributo a) {
@@ -34,6 +34,12 @@ public class AtributoPorMayor extends Atributo{
 		return "Atributo Por Mayor --> Nombre=" + getNombre()
 				+ ", Valor=" + getValor() + ", Condicion="
 				+ getCondicion();
+	}
+	
+	
+	public Atributo getCopia(){
+	
+	    return new AtributoPorMayor(this.getNombre(),this.getValor(), this.getCondicion());
 	}
 	
 }

@@ -80,7 +80,11 @@ public class Carta {
 		while (!this.atributos.get(i).getNombre().equals(n) && i<this.atributos.size()){
 			i++;
 		}
-		return this.atributos.get(i);
+		Atributo aa =this.atributos.get(i).getCopia();
+		if (pocima !=null){
+			aa.setValor(pocima.calcular(aa,0.0));
+		}
+		return aa;
     }
     
     /**
@@ -103,7 +107,5 @@ public class Carta {
 		return "Carta [nombre=" + nombre + ", atributos=" + atributos
 				+ ", pocima=" + pocima + "]";
 	}
-	
-   
     
 }

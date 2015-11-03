@@ -12,12 +12,12 @@ public abstract class Atributo {
 	/**
 	 * Constructor Atributo
 	 * @param nombre
-	 * @param valor
+	 * @param d
 	 * @param condicion
 	 */
-	public Atributo(String nombre, int valor, int condicion){
+	public Atributo(String nombre, double d, int condicion){
 		this.nombre = nombre;
-		this.valor = valor;
+		this.valor = d;
 		this.condicion = condicion;
 	}
 
@@ -69,5 +69,5 @@ public abstract class Atributo {
 	 * @return un atributo
 	 */
 	protected abstract int comparar(Atributo a);
-
+    public abstract Atributo getCopia();
 }

@@ -9,11 +9,11 @@ public class AtributoPorMenor extends Atributo{
 	/**
 	 * Constructor AtributoPorMenor
 	 * @param n
-	 * @param v
+	 * @param d
 	 * @param c
 	 */
-	public AtributoPorMenor(String n, int v, int c){		
-		super(n,v,c);
+	public AtributoPorMenor(String n, double d, int c){		
+		super(n,d,c);
 	}
 	
 	public int comparar(Atributo a) {
@@ -37,4 +37,9 @@ public class AtributoPorMenor extends Atributo{
 				+ getCondicion();
 	}
 
+	
+	
+	public Atributo getCopia(){
+		return new AtributoPorMenor(this.getNombre(),this.getValor(),this.getCondicion());
+	}
 }
