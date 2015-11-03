@@ -82,7 +82,7 @@ public class Carta {
 		}
 		Atributo atribADevolver =this.atributos.get(i).getCopia();
 		if (pocima !=null){
-			atribADevolver.setValor(pocima.calcular(atribADevolver,0.0));
+			atribADevolver.setValor(pocima.calcular(atribADevolver));
 		}
 		return atribADevolver;
     }
@@ -96,7 +96,7 @@ public class Carta {
 			return "Carta " + nombre + ": { " + atributos+ " }";
 		}
 		else{
-			return "Carta " + nombre + " <" + pocima.getNombre() + ">: {" + atributos + " }";
+			return "Carta " + nombre + " <" + pocima.getNombrePocima() + ">: {" + atributos + " }";
 		}
 	}
     
