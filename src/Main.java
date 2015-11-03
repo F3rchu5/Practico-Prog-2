@@ -99,9 +99,11 @@ public class Main {
 			juegoNuevo.repartirCartas(mazoLeido, j1, j2);
 		}
 		else{
-			juegoNuevo.repartirCartasConPosimas(mazoLeido, pocimasARepartir, j1, j2);
+			juegoNuevo.repartirCartasConPocimas(mazoLeido, pocimasARepartir, j1, j2);
 		}
-        //juegoNuevo.Jugar(mazoLeido, j1, j2);
+		
+        juegoNuevo.Jugar(mazoLeido, j1, j2);
+        
 		System.out.println("Juego Terminado!");
         sc.close();
 

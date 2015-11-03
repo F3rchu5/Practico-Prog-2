@@ -18,7 +18,7 @@ public class Carta {
      * @param pocima
      */
     public Carta(String nombre, Vector<Atributo> atributos) {
-        this.nombre=nombre;
+        this.nombre = nombre;
         this.atributos = atributos;
         this.pocima = null;
     }
@@ -80,23 +80,11 @@ public class Carta {
 		while (!this.atributos.get(i).getNombre().equals(n) && i<this.atributos.size()){
 			i++;
 		}
-		Atributo aa =this.atributos.get(i).getCopia();
+		Atributo atribADevolver =this.atributos.get(i).getCopia();
 		if (pocima !=null){
-			aa.setValor(pocima.calcular(aa,0.0));
+			atribADevolver.setValor(pocima.calcular(atribADevolver,0.0));
 		}
-		return aa;
-    }
-    
-    /**
-	 * @param atributos
-	 * @param pocima 
-	 */
-    public void actualizarAtributos(){
-    	for (int i=0; i<this.getCantAtrib(); i++){
-    		double valor = this.atributos.get(i).getValor();
-    		Atributo atributo = this.atributos.get(i);
-    		this.atributos.get(i).setValor(this.pocima.calcular(atributo, valor));
-    	}
+		return atribADevolver;
     }
 
 	/* (non-Javadoc)
@@ -104,8 +92,12 @@ public class Carta {
 	 */
 	@Override
 	public String toString() {
-		return "Carta [nombre=" + nombre + ", atributos=" + atributos
-				+ ", pocima=" + pocima + "]";
+		if (pocima == null){
+			return "Carta " + nombre + ": { " + atributos+ " }";
+		}
+		else{
+			return "Carta " + nombre + " <" + pocima.getNombre() + ">: {" + atributos + " }";
+		}
 	}
     
 }

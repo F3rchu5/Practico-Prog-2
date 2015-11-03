@@ -52,7 +52,7 @@ public class Juego {
 	 * @param j1
 	 * @param j2
 	 */
-	public void repartirCartasConPosimas(Mazo mazoGral, Vector<Pocima> aRepartir, Jugador j1, Jugador j2){
+	public void repartirCartasConPocimas(Mazo mazoGral, Vector<Pocima> aRepartir, Jugador j1, Jugador j2){
 		
 		Mazo mazoJ1=j1.getMazoJugador();
 		Mazo mazoJ2=j2.getMazoJugador();
@@ -65,7 +65,6 @@ public class Juego {
 				aRepartir.removeElementAt(0);
 			}
 			mazoJ1.agregarCarta(c1);
-			}
 			if (mazoGral.cantCartas()>0) {
 				Carta c2 = mazoGral.cartaActual();
 				mazoGral.borrarCartaActual();
@@ -76,6 +75,8 @@ public class Juego {
 				mazoJ2.agregarCarta(c2);
 			}
 		}  
+	}
+		
 	
 	/**
 	 * Hace la comparación del atributo elegido aleatoriamente.
