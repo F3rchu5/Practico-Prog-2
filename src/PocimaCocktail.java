@@ -9,15 +9,15 @@ public class PocimaCocktail extends Pocima{
 		this.pocimas = vPocimas;		
 	}
 
-	protected double calcular(Atributo a,double v){
-		Atributo aux = a.getCopia();
+	protected double calcular(Atributo a){
+		Atributo aCopia = a.getCopia();
 		double acumulado = 0;
 		for (int i=0;i<pocimas.size();i++){
 			
-			acumulado= pocimas.get(i).calcular(aux, v);
-			aux.setValor(acumulado);
+			acumulado= pocimas.get(i).calcular(aCopia);
+			aCopia.setValor(acumulado);
 		}
-		return aux.getValor(); 
+		return aCopia.getValor(); 
 	} 
 	
 }
