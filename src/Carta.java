@@ -93,10 +93,18 @@ public class Carta {
 	@Override
 	public String toString() {
 		if (pocima == null){
-			return nombre + ": { " + atributos + " }";
+			String aRetornar = nombre + ": { ";
+			for (Atributo a:this.atributos){
+				aRetornar = aRetornar + a.getNombre() + " = " + a.getValor() + "; ";
+			}
+			return aRetornar + "}";
 		}
 		else{
-			return nombre + " <" + pocima.getNombrePocima() + ">: {" + atributos + " }";
+			String aRetornar = nombre + " <" + pocima.getNombrePocima() + ">: { ";
+			for (Atributo a:this.atributos){
+				aRetornar = aRetornar + a.getNombre() + " = " + a.getValor() + "; ";
+			}
+			return aRetornar + "}";
 		}
 	}
     
