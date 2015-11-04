@@ -11,12 +11,12 @@ public class PocimaSelectivaAtributo extends PocimaModificadora{
 	}
 	
 	protected double calcular(Atributo a){
-		double operacion=0;
 		if (a.getNombre().equals(getNombrePocima())){
-		operacion = a.getValor()+( a.getValor()* this.getPorcentaje()/100);
-		
+			double operacion = a.getValor()+( a.getValor()* this.getPorcentaje()/100);
+			return operacion;
 		}
-		return operacion;
+		else
+			return a.getValor();
 	}
 
 	/* (non-Javadoc)

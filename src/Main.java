@@ -26,9 +26,9 @@ public class Main {
 		pocimasARepartir.add(selecFuerza);
 		Pocima selecPeso = new PocimaSelectivaAtributo("peso",-43);              //2
 		pocimasARepartir.add(selecPeso);
-		Pocima selecFuerza2 = new PocimaSelectivaAtributo("Fuerza",-35);         //3
+		Pocima selecFuerza2 = new PocimaSelectivaAtributo("fuerza",-35);         //3
 		pocimasARepartir.add(selecFuerza2);
-		Pocima selecPeso2 = new PocimaSelectivaAtributo("Peso",-43);             //4
+		Pocima selecPeso2 = new PocimaSelectivaAtributo("peso",-43);             //4
 		pocimasARepartir.add(selecPeso2);
 		Pocima vFijo1 = new ValorFijo("Valor Fijo",5);                           //1
 		pocimasARepartir.add(vFijo1);
@@ -86,6 +86,7 @@ public class Main {
 		System.out.println("JUGADOR 2: "+nombrej2);
 		
 		Mazo mazoLeido=new Mazo(ruta);
+		mazoLeido.mezclarCartas();
         
         Juego juegoNuevo = new Juego(mazoLeido);
         

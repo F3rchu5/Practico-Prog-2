@@ -69,5 +69,5 @@ public abstract class Atributo {
 	 * @return un atributo
 	 */
 	protected abstract int comparar(Atributo a);
-    public abstract Atributo getCopia();
+    protected abstract Atributo getCopia();
 }

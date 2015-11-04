@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Collections;
 import java.util.Vector;
  
 public class Mazo {
@@ -192,7 +193,14 @@ public class Mazo {
 	public int cantCartas(){
 		return this.cartas.size();
 	}
-
+	
+	/**
+	 * 
+	 */
+	public void mezclarCartas(){
+		Collections.shuffle(this.cartas);
+	}
+	
 	@Override
     public String toString() {
         String toReturn="";

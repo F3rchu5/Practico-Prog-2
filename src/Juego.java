@@ -140,7 +140,7 @@ public class Juego {
 		             }
 		             if(mj2.getMazoJugador().cantCartas()>0) {
 					      c2 = mj2.dameCarta();
-					      System.out.println("La carta 2 es: " + c1);
+					      System.out.println("La carta 2 es: " + c2);
 		             } 
 		             else {
 		            	 if(mj1.getMazoJugador().cantCartas()>0){
