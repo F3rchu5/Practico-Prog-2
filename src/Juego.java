@@ -170,6 +170,7 @@ public class Juego {
 		do {
 			if (j1.esGanador()){
 				String atrAleatorio= j1.seleccionAtribAleatorio();
+				System.out.println(" ");
 				System.out.println("El atributo por el que se va a compara es: " + atrAleatorio);
 				compararCartas(j1,j2, atrAleatorio); 
 				i++;
@@ -177,6 +178,7 @@ public class Juego {
 			else{
 				if (j2.esGanador()){
 					String atrAleatorio= j2.seleccionAtribAleatorio();
+					System.out.println(" ");
 					System.out.println("El atributo por el que se va a compara es: " + atrAleatorio);
 					compararCartas(j1,j2, atrAleatorio);
 					i++;
@@ -188,7 +190,7 @@ public class Juego {
 				System.out.println("La ronda " + i + " la gano el jugador 2: " + j2.getNombre());
 		    
 		} while (j1.canCartas()!=0 && j2.canCartas()!=0);
-
+		System.out.println(" ");
        if (j1.canCartas()>0)
     	   System.out.println("El ganador del juego es: " + j1.getNombre());
        else{

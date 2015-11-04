@@ -16,6 +16,10 @@ public class AtributoPorMenor extends Atributo{
 		super(n,d,c);
 	}
 	
+	/**
+	 * @param un atributo
+	 * @return si el atributo es mayor, menor o igual
+	 */
 	public int comparar(Atributo a) {
 		
 		if (a.getValor()<this.getValor()) 
@@ -27,19 +31,20 @@ public class AtributoPorMenor extends Atributo{
 		return 0;
 	}
 	
+	/**
+	 * @return una copia del atributo
+	 */
+	public Atributo getCopia(){
+		return new AtributoPorMenor(this.getNombre(),this.getValor(),this.getCondicion());
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Atributo Por Menor --> Nombre=" + getNombre()
-				+ ", Valor=" + getValor() + ", Condicion="
-				+ getCondicion();
+		return "Atributo Por Menor --> " + getNombre()
+				+ " = " + getValor();
 	}
-
 	
-	
-	public Atributo getCopia(){
-		return new AtributoPorMenor(this.getNombre(),this.getValor(),this.getCondicion());
-	}
 }

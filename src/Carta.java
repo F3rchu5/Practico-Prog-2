@@ -93,10 +93,10 @@ public class Carta {
 	@Override
 	public String toString() {
 		if (pocima == null){
-			return "Carta " + nombre + ": { " + atributos+ " }";
+			return nombre + ": { " + atributos + " }";
 		}
 		else{
-			return "Carta " + nombre + " <" + pocima.getNombrePocima() + ">: {" + atributos + " }";
+			return nombre + " <" + pocima.getNombrePocima() + ">: {" + atributos + " }";
 		}
 	}
     

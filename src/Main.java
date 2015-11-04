@@ -22,9 +22,9 @@ public class Main {
 		pocimasARepartir.add(kripto);
 		Pocima reduPlomo = new PocimaModificadora("Reductor de Plomo",-55);      //4
 		pocimasARepartir.add(reduPlomo);
-		Pocima selecFuerza = new PocimaSelectivaAtributo("Fuerza",-35);          //1
+		Pocima selecFuerza = new PocimaSelectivaAtributo("fuerza",-35);          //1
 		pocimasARepartir.add(selecFuerza);
-		Pocima selecPeso = new PocimaSelectivaAtributo("Peso",-43);              //2
+		Pocima selecPeso = new PocimaSelectivaAtributo("peso",-43);              //2
 		pocimasARepartir.add(selecPeso);
 		Pocima selecFuerza2 = new PocimaSelectivaAtributo("Fuerza",-35);         //3
 		pocimasARepartir.add(selecFuerza2);
@@ -50,16 +50,16 @@ public class Main {
 		vPoc1.add(pLimitada1);
 		vPoc1.add(selecPeso);
 		vPoc1.add(vFijo4);
-		Pocima cocktail1 = new PocimaCocktail(vPoc1); 					         //1
+		Pocima cocktail1 = new PocimaCocktail("Cocktail 1",vPoc1); 			     //1
 		pocimasARepartir.add(cocktail1);
 		Vector<Pocima> vPoc2 = new Vector<Pocima>();
 		vPoc2.add(pLimitada1);
-		Pocima cocktail2 = new PocimaCocktail(vPoc2);                            //2
+		Pocima cocktail2 = new PocimaCocktail("Cocktail 2",vPoc2);               //2
 		pocimasARepartir.add(cocktail2);
 		Vector<Pocima> vPoc3 = new Vector<Pocima>();
 		vPoc3.add(cocktail1);
 		vPoc3.add(cocktail2);
-		Pocima cocktail3 = new PocimaCocktail(vPoc3);                            //3
+		Pocima cocktail3 = new PocimaCocktail("Cocktail 3",vPoc3);               //3
 		pocimasARepartir.add(cocktail3);
 		Vector<Pocima> vPoc4 = new Vector<Pocima>();
 		vPoc4.add(fortalecedora);
@@ -67,7 +67,7 @@ public class Main {
 		vPoc4.add(selecFuerza);
 		vPoc4.add(kripto);
 		vPoc4.add(pLimitada3);
-		Pocima cocktail4 = new PocimaCocktail(vPoc4); 					        //4
+		Pocima cocktail4 = new PocimaCocktail("Cocktail 4",vPoc4); 		         //4
 		pocimasARepartir.add(cocktail4);
 		
 		

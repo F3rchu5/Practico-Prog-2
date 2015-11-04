@@ -41,9 +41,8 @@ public class AtributoPorMayor extends Atributo{
 	 */
 	@Override
 	public String toString() {
-		return "Atributo Por Mayor --> Nombre=" + getNombre()
-				+ ", Valor=" + getValor() + ", Condicion="
-				+ getCondicion();
+		return "Atributo Por Mayor --> " + getNombre()
+				+ " = " + getValor();
 	}
 	
 }
