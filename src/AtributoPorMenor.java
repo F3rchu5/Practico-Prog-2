@@ -21,7 +21,6 @@ public class AtributoPorMenor extends Atributo{
 	 * @return si el atributo es mayor, menor o igual
 	 */
 	public int comparar(Atributo a) {
-		
 		if (a.getValor()<this.getValor()) 
 			return 1;
 		else 

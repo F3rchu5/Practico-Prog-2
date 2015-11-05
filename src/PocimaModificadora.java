@@ -7,6 +7,7 @@
 public class PocimaModificadora extends Pocima{
 
 	/**
+	 * Constructor
 	 * @param nombre
 	 * @param valor
 	 */
@@ -15,19 +16,15 @@ public class PocimaModificadora extends Pocima{
 		this.valor = valor;
 	}
 	
+	/**
+	 * Realiza el calculo del valor del atributo
+	 * @param a
+	 * @return un valor
+	 */
 	protected double calcular(Atributo a){
 		double operacion;
 		operacion = a.getValor()+( a.getValor()* this.getPorcentaje()/100);
 		return operacion;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "PocimaModificadora [getNombre()=" + getNombrePocima() + ", getValor()="
-				+ getPorcentaje() + "]";
-	}
-	
 }

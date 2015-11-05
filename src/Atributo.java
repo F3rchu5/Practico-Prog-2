@@ -66,8 +66,14 @@ public abstract class Atributo {
 	/**
 	 * compara con el atributo y retorna el que gano
 	 * @param a
-	 * @return un atributo
+	 * @return un número entero (puede ser 1, -1 o 0)
 	 */
 	protected abstract int comparar(Atributo a);
+	
+	/**
+	 * clona un atributo
+	 * @return un atributo
+	 */
     protected abstract Atributo getCopia();
+    
 }

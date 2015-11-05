@@ -102,7 +102,8 @@ public class Carta {
 		else{
 			String aRetornar = nombre + " <" + pocima.getNombrePocima() + ">: { ";
 			for (Atributo a:this.atributos){
-				aRetornar = aRetornar + a.getNombre() + " = " + a.getValor() + "; ";
+				double vConPocima = pocima.calcular(a);
+				aRetornar = aRetornar + a.getNombre() + " = " + vConPocima + "; ";
 			}
 			return aRetornar + "}";
 		}

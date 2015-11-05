@@ -11,6 +11,7 @@ public class PocimaLimitada extends Pocima{
 	
 	
 	/**
+	 * Constructor
 	 * @param nombre
 	 * @param valor
 	 */
@@ -18,6 +19,11 @@ public class PocimaLimitada extends Pocima{
 		super.nombre = nombre;
 	}
 
+	/**
+	 * Realiza el calculo del valor del atributo
+	 * @param a
+	 * @return un valor
+	 */
 	protected double calcular(Atributo a){
 		double operacion=0;
 		if (cantVeces==0){
@@ -31,16 +37,7 @@ public class PocimaLimitada extends Pocima{
 			}
 		}
 		cantVeces++;
-	return operacion;
-	}
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "PocimaLimitada [cantVeces=" + cantVeces + ", primera=" + primera + ", segunda=" + segunda + ", getNombre()="
-				+ getNombrePocima() + ", getPorcentaje()=" + getPorcentaje() + "]";
+		return operacion;
 	}
 	
 }

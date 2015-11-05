@@ -3,6 +3,7 @@
  * @author Daniela Colamai y Fernanda Gonzalez
  *
  */
+
 public abstract class Pocima {
 	protected String nombre;
 	protected int valor;

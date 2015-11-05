@@ -7,6 +7,7 @@
 public class ValorFijo extends Pocima{
 
 	/**
+	 * Constructor
 	 * @param nombre
 	 * @param valor
 	 */
@@ -15,17 +16,13 @@ public class ValorFijo extends Pocima{
 		this.valor = valor;
 	}
 	
+	/**
+	 * Realiza el calculo del valor del atributo
+	 * @param a
+	 * @return un valor
+	 */
 	protected double calcular(Atributo a){
 		return getPorcentaje();
-	}
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "ValorFijo [getNombrePocima()=" + getNombrePocima() + ", getPorcentaje()="
-				+ getPorcentaje() + "]";
 	}
 
 }

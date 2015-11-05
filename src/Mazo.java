@@ -80,7 +80,6 @@ public class Mazo {
 	}
 	
 	/**
-	 * 
 	 * @return una carta si no devuelve NULL
 	 */
 	public Carta cartaActual() {

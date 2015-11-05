@@ -93,7 +93,7 @@ public class Main {
         System.out.println("Desea jugar con pócimas? (1 = Si o 0 = No)");
 		int respuesta = sc.nextInt();
 		while ((respuesta != 1) && (respuesta != 0)){
-			System.out.println("El valor ingresado NO es correcto. Por favor ingrese si o no: ");
+			System.out.println("El valor ingresado NO es correcto. Por favor ingrese 1 = Si o 0 = No: ");
 			respuesta = sc.nextInt();
 		}
 		if (respuesta == 0){
